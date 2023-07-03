@@ -59,29 +59,29 @@ function App() {
   }, [profileName, randomIconProfile]);
 
   // Check if user is logged in
-  useEffect(() => {
-    const currentUser =
-      sessionStorage.getItem("token") !== null
-        ? JSON.parse(sessionStorage.getItem("token"))
-        : sessionStorage.clear();
+  // useEffect(() => {
+  //   const currentUser =
+  //     sessionStorage.getItem("token") !== null
+  //       ? JSON.parse(sessionStorage.getItem("token"))
+  //       : sessionStorage.clear();
 
-    console.log("Current User:", currentUser);
+  //   console.log("Current User:", currentUser);
 
-    const hashPath = window.location.hash.slice(1); // Get the path after the hash symbol
+  //   const hashPath = window.location.hash.slice(1); // Get the path after the hash symbol
 
-    if (
-      !currentUser &&
-      hashPath !== "/signin" &&
-      hashPath !== "/signup" &&
-      hashPath !== "/signup2" &&
-      hashPath !== "/signup3" &&
-      hashPath !== "/signup4" &&
-      hashPath !== "/payment" &&
-      hashPath !== "/"
-    ) {
-      navigate("/");
-    }
-  }, [navigate]);
+  //   if (
+  //     !currentUser &&
+  //     hashPath !== "/signin" &&
+  //     hashPath !== "/signup" &&
+  //     hashPath !== "/signup2" &&
+  //     hashPath !== "/signup3" &&
+  //     hashPath !== "/signup4" &&
+  //     hashPath !== "/payment" &&
+  //     hashPath !== "/"
+  //   ) {
+  //     navigate("/");
+  //   }
+  // }, [navigate]);
 
   return (
     <>

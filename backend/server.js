@@ -2,6 +2,7 @@ import app from "./middleware/middleware.js";
 import dotenv from "dotenv";
 import postgres from "postgres";
 import axios from "axios";
+import redis from "redis";
 
 dotenv.config({ path: "../.env" });
 
